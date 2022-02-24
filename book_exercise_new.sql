@@ -21,3 +21,10 @@
 -- group by 1
 -- order by 1;
 
+select title, author_lname,
+case
+when count(*) = 1 then '1 book'
+else concat(count(*), ' books')
+end as COUNT
+from books
+group by author_lname, author_fname;
