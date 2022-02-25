@@ -8,6 +8,7 @@
 -- join customers
 --     on customers.id = orders.customer_id;
 
+-- LEFT JOIN
 select 
     first_name, 
     last_name, 
@@ -17,3 +18,10 @@ left join orders
     on customers.id = orders.customer_id
 group by customers.id
 order by total_spent;
+
+
+-- RIGHT JOIN
+select * 
+from customers
+right join orders
+    on customers.id = orders.customer_id;
